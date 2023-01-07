@@ -1,22 +1,5 @@
 import './App.css';
 
-const dataList = [
-  {
-    name: 'Burker King',
-    image:
-      'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
-    cusines: ['Burger', 'Americano'],
-    rating: '4.2',
-  },
-  {
-    name: 'Mac De King',
-    image:
-      'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
-    cusines: ['Burger', 'Americano'],
-    rating: '4.5',
-  },
-];
-
 const Title = () => {
   return (
     <img
@@ -43,16 +26,37 @@ const Header = () => {
   );
 };
 
-const Card = () => {
+const dataList = [
+  {
+    name: 'Burker King',
+    image:
+      'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
+    cusines: ['Burger', 'Americano'],
+    rating: '4.2',
+  },
+  {
+    name: 'Mac De King',
+    image:
+      'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
+    cusines: ['Burger', 'Americano'],
+    rating: '4.5',
+  },
+  {
+    name: 'Mac De King',
+    image:
+      'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
+    cusines: ['Burger', 'Americano'],
+    rating: '4.5',
+  },
+];
+
+const Card = ({ name, image, cusines, rating }) => {
   return (
     <div className="card">
-      <img
-        alt="test "
-        src="https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck"
-      />
-      <h2>Pizza hut</h2>
-      <h3>Itelian, Chezzz</h3>
-      <h4>4.2 Rating</h4>
+      <img alt="test " src={image} />
+      <h2>{name}</h2>
+      <h3>{cusines.join(',')}</h3>
+      <h4>{rating}</h4>
     </div>
   );
 };
@@ -60,16 +64,9 @@ const Card = () => {
 const Body = () => {
   return (
     <div className="cardList">
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      {dataList.map((item) => {
+        return <Card {...item} />;
+      })}
     </div>
   );
 };
