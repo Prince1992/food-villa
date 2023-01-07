@@ -28,6 +28,7 @@
   padding: 10px;
   margin: 10px;
   border: 1px solid black;
+  box-shadow: 10px 10px lightgrey;
 }
 
 .card>img {
@@ -37,4 +38,25 @@
 .cardList {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.footer {
+  display: flex;
+  background-color: lightgrey;
+  justify-content: end;
+  ;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.footer>ul {
+  display: flex;
+  list-style: none;
+  align-items: flex-end;
+}
+
+.footer>ul>li {
+  padding: 10px
 }

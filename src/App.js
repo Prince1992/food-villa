@@ -48,6 +48,55 @@ const dataList = [
     cusines: ['Burger', 'Americano'],
     rating: '4.5',
   },
+  {
+    name: 'Mac De King',
+    image:
+      'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
+    cusines: ['Burger', 'Americano'],
+    rating: '4.5',
+  },
+  {
+    name: 'Mac De King',
+    image:
+      'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
+    cusines: ['Burger', 'Americano'],
+    rating: '4.5',
+  },
+  {
+    name: 'Mac De King',
+    image:
+      'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
+    cusines: ['Burger', 'Americano'],
+    rating: '4.5',
+  },
+  {
+    name: 'Mac De King',
+    image:
+      'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
+    cusines: ['Burger', 'Americano'],
+    rating: '4.5',
+  },
+  {
+    name: 'Mac De King',
+    image:
+      'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
+    cusines: ['Burger', 'Americano'],
+    rating: '4.5',
+  },
+  {
+    name: 'Mac De King',
+    image:
+      'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
+    cusines: ['Burger', 'Americano'],
+    rating: '4.5',
+  },
+  {
+    name: 'Mac De King',
+    image:
+      'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
+    cusines: ['Burger', 'Americano'],
+    rating: '4.5',
+  },
 ];
 
 const Card = ({ name, image, cusines, rating }) => {
@@ -71,7 +120,17 @@ const Body = () => {
   );
 };
 const Footer = () => {
-  return <h1>Footer</h1>;
+  return (
+    <div className="footer">
+      <ul>
+        <li>Test</li>
+        <li>Test</li>
+        <li>Test</li>
+        <li>Test</li>
+        <li>Test</li>
+      </ul>
+    </div>
+  );
 };
 function AppLayout() {
   return (
