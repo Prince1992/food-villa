@@ -7,69 +7,69 @@ export const dataList = [
     image:
       'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
     cusines: ['Burger', 'Americano'],
-    rating: '4.2',
+    rating: '1',
   },
   {
     name: 'Mac De King',
     image:
       'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
     cusines: ['Burger', 'Americano'],
-    rating: '4.5',
+    rating: '2',
   },
   {
     name: 'Mac De King',
     image:
       'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
     cusines: ['Burger', 'Americano'],
-    rating: '4.5',
+    rating: '3',
   },
   {
     name: 'Mac De King',
     image:
       'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
     cusines: ['Burger', 'Americano'],
-    rating: '4.5',
+    rating: '4',
   },
   {
     name: 'Mac De King',
     image:
       'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
     cusines: ['Burger', 'Americano'],
-    rating: '4.5',
+    rating: '5',
   },
   {
     name: 'Mac De King',
     image:
       'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
     cusines: ['Burger', 'Americano'],
-    rating: '4.5',
+    rating: '6',
   },
   {
     name: 'Mac De King',
     image:
       'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
     cusines: ['Burger', 'Americano'],
-    rating: '4.5',
+    rating: '7',
   },
   {
     name: 'Mac De King',
     image:
       'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
     cusines: ['Burger', 'Americano'],
-    rating: '4.5',
+    rating: '8',
   },
   {
     name: 'Mac De King',
     image:
       'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
     cusines: ['Burger', 'Americano'],
-    rating: '4.5',
+    rating: '9',
   },
   {
     name: 'Mac De King',
     image:
       'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
     cusines: ['Burger', 'Americano'],
-    rating: '4.5',
+    rating: '10',
   },
 ];
