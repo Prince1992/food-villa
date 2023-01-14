@@ -4,7 +4,7 @@ import Card from './Card';
 
 const Body = () => {
   //searchTxt  is local variable
-  const [restaurant, setRestaurant] = useState(dataList);
+  const [restaurant, setRestaurant] = useState();
   const [searchText, setSearchText] = useState(''); // to create a state variable
 
   useEffect(() => {
@@ -53,8 +53,9 @@ const Body = () => {
         </button>
       </div>
       <div className="cardList">
-        {restaurant?.map((item) => {
-          return <Card {...item} key={item.rating} />;
+        {restaurant?.map((restaurant) => {
+          debugger;
+          return <Card {...restaurant.data} key={restaurant?.data?.id} />;
         })}
       </div>
     </>

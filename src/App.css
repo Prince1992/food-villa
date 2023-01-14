@@ -29,10 +29,11 @@
   margin: 10px;
   border: 1px solid black;
   box-shadow: 10px 10px lightgrey;
+  overflow-wrap: break-word;
 }
 
 .card>img {
-  width: 150px;
+  width: 100%;
 }
 
 .cardList {
