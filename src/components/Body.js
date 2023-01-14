@@ -3,10 +3,12 @@ import { dataList } from '../config';
 import Card from './Card';
 
 const Body = () => {
-  const [searchTxt, setSearchTxt] = useState('');
+  //searchTxt  is local variable
+  const [searchInput, setSearchInput] = useState(''); // to create a state variable
+  const [searchClicked, setSearchClicked] = useState('false');
 
   const onChangeValue = (e) => {
-    setSearchTxt(e.target.value);
+    setSearchInput(e.target.value);
   };
 
   return (
@@ -16,10 +18,11 @@ const Body = () => {
           type="text"
           className="search-input"
           placeholder="Search"
-          value={searchTxt}
+          value={searchInput}
           onChange={onChangeValue}
         />
-        <button className="search-btn">Button</button>
+        <h1>{searchClicked}</h1>
+        <button className="search-btn">Button - {searchInput}</button>
       </div>
       <div className="cardList">
         {dataList.map((item) => {
