@@ -10,63 +10,63 @@ export const dataList = [
     rating: '1',
   },
   {
-    name: 'Mac De King',
+    name: 'Pizza Hut',
     image:
       'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
     cusines: ['Burger', 'Americano'],
     rating: '2',
   },
   {
-    name: 'Mac De King',
+    name: 'Beggies',
     image:
       'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
     cusines: ['Burger', 'Americano'],
     rating: '3',
   },
   {
-    name: 'Mac De King',
+    name: 'Tau Ji ka Khana',
     image:
       'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
     cusines: ['Burger', 'Americano'],
     rating: '4',
   },
   {
-    name: 'Mac De King',
+    name: 'Anna Dhaba',
     image:
       'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
     cusines: ['Burger', 'Americano'],
     rating: '5',
   },
   {
-    name: 'Mac De King',
+    name: 'Dawat Res',
     image:
       'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
     cusines: ['Burger', 'Americano'],
     rating: '6',
   },
   {
-    name: 'Mac De King',
+    name: 'Sharma ji Chai',
     image:
       'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
     cusines: ['Burger', 'Americano'],
     rating: '7',
   },
   {
-    name: 'Mac De King',
+    name: 'Raju Da Dhaba',
     image:
       'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
     cusines: ['Burger', 'Americano'],
     rating: '8',
   },
   {
-    name: 'Mac De King',
+    name: 'KFC',
     image:
       'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
     cusines: ['Burger', 'Americano'],
     rating: '9',
   },
   {
-    name: 'Mac De King',
+    name: 'Yello Chilli',
     image:
       'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/b5bxxjd9nfgzow34wpck',
     cusines: ['Burger', 'Americano'],
