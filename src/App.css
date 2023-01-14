@@ -45,8 +45,7 @@
 .footer {
   display: flex;
   background-color: lightgrey;
-  justify-content: end;
-  ;
+  justify-content: flex-end;
   height: 100px;
   margin: 10px;
   padding: 10px;
