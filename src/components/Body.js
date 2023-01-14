@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
-import { dataList } from '../config';
 import Card from './Card';
+import Shimmer from './Shimmer';
 
 const Body = () => {
   //searchTxt  is local variable
-  const [restaurant, setRestaurant] = useState();
+  const [allRestaurant, setAllRestaurant] = useState([]);
+  const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState(''); // to create a state variable
 
   useEffect(() => {
@@ -18,8 +19,8 @@ const Body = () => {
     );
     const json = await data.json();
     const restaurantList = json?.data?.cards[2]?.data?.data?.cards;
-    console.log(restaurantList);
-    setRestaurant(restaurantList);
+    setAllRestaurant(restaurantList);
+    setFilteredRestaurant(restaurantList);
   }
 
   const onChangeValue = (e) => {
@@ -27,11 +28,23 @@ const Body = () => {
   };
 
   const filterData = () => {
-    const filterData = dataList.filter((res) => res.name.includes(searchText));
+    console.log(allRestaurant);
+    const filterData = allRestaurant.filter((res) =>
+      res?.data?.name?.toLowerCase().includes(searchText.toLowerCase())
+    );
     return filterData;
   };
 
-  return (
+  console.log('Render');
+
+  //if restaurant is empty => load shimmer UI
+  // if restaurant has data => actual data
+
+  if (!allRestaurant) return null;
+
+  return allRestaurant.length === 0 ? (
+    <Shimmer />
+  ) : (
     <>
       <div className="searchContainer">
         <input
@@ -45,18 +58,21 @@ const Body = () => {
         <button
           className="search-btn"
           onClick={() => {
-            const data = filterData(dataList);
-            setRestaurant(data);
+            const data = filterData(allRestaurant);
+            setFilteredRestaurant(data);
           }}
         >
-          Button
+          Search
         </button>
       </div>
       <div className="cardList">
-        {restaurant?.map((restaurant) => {
-          debugger;
-          return <Card {...restaurant.data} key={restaurant?.data?.id} />;
-        })}
+        {filteredRestaurant.length === 0 ? (
+          <h1>No Restaurant Found....</h1>
+        ) : (
+          filteredRestaurant?.map((restaurant) => {
+            return <Card {...restaurant.data} key={restaurant?.data?.id} />;
+          })
+        )}
       </div>
     </>
   );
