@@ -8,6 +8,7 @@ import AppLayout from './App';
 import Error from './components/Error';
 import Contact from './components/Contact';
 import Body from './components/Body';
+import RestrauntMenu from './components/RestrauntMenu';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -28,6 +29,10 @@ const appRouter = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact />,
+      },
+      {
+        path: '/restaurant/:id',
+        element: <RestrauntMenu />,
       },
     ],
   },

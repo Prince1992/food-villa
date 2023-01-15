@@ -67,3 +67,7 @@
   background-color: lightgray;
   margin: 20px;
 }
+
+.menu {
+  display: flex;
+}
