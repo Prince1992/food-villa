@@ -27,13 +27,15 @@ const RestrauntMenu = () => {
     <Shimmer />
   ) : (
     <div className="menu">
-      <h1>Restrauent id: {resInfo.id}</h1>
-      <h2>{resInfo.name}</h2>
-      <h2>{resInfo.area}</h2>
-      <h2>{resInfo.city}</h2>
-      <h2>{resInfo.costForTwoMsg}</h2>
-      <h2>{resInfo.avgRating}</h2>
-      <img src={IMG_CDN_URL + resInfo.cloudinaryImageId} alt="Test" />
+      <div>
+        <h1>Restrauent id: {resInfo.id}</h1>
+        <h2>{resInfo.name}</h2>
+        <h2>{resInfo.area}</h2>
+        <h2>{resInfo.city}</h2>
+        <h2>{resInfo.costForTwoMsg}</h2>
+        <h2>{resInfo.avgRating}</h2>
+        <img src={IMG_CDN_URL + resInfo.cloudinaryImageId} alt="Test" />
+      </div>
       <div>
         <h2>Menu</h2>
         <ul>
