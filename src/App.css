@@ -60,3 +60,10 @@
 .footer>ul>li {
   padding: 10px
 }
+
+.shimmer-card {
+  width: 200px;
+  height: 200px;
+  background-color: lightgray;
+  margin: 20px;
+}
