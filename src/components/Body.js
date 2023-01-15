@@ -28,14 +28,11 @@ const Body = () => {
   };
 
   const filterData = () => {
-    console.log(allRestaurant);
     const filterData = allRestaurant.filter((res) =>
       res?.data?.name?.toLowerCase().includes(searchText.toLowerCase())
     );
     return filterData;
   };
-
-  console.log('Render');
 
   //if restaurant is empty => load shimmer UI
   // if restaurant has data => actual data

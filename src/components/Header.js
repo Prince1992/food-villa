@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { IMG_URL } from '../config';
+import Logo from '../assets/img/logo.jpeg';
 
 const loggedInUser = () => {
   // API call to check
   return true;
 };
 const Title = () => {
-  return <img className="logo" alt="test" src={IMG_URL} />;
+  return <img className="logo" alt="test" src={Logo} />;
 };
 
 const Header = () => {
