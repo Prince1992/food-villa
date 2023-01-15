@@ -7,6 +7,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import About from './components/About';
 import AppLayout from './App';
 import Error from './components/Error';
+import Contact from './components/Contact';
+import Body from './components/Body';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -15,11 +17,20 @@ const appRouter = createBrowserRouter([
     path: '/',
     element: <AppLayout />,
     errorElement: <Error />,
-  },
-
-  {
-    path: '/about',
-    element: <About />,
+    children: [
+      {
+        path: '/',
+        element: <Body />,
+      },
+      {
+        path: '/about',
+        element: <About />,
+      },
+      {
+        path: '/contact',
+        element: <Contact />,
+      },
+    ],
   },
 ]);
 
