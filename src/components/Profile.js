@@ -1,7 +1,12 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export const Profile = ({ name }) => {
   const [count, setCount] = useState(10);
+  useEffect(() => {
+    console.log('use Effect');
+  });
+  console.log('render funntion');
+
   return (
     <div>
       <h2>Its Profile Compoenet</h2>
