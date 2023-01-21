@@ -9,7 +9,7 @@ import Error from './components/Error';
 import Contact from './components/Contact';
 import Body from './components/Body';
 import RestrauntMenu from './components/RestrauntMenu';
-import Profile from './components/Profile';
+import Profile from './components/ProfileClass';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
