@@ -25,14 +25,14 @@ class Profile extends React.Component {
       userInfo: data1,
     });
 
-    this.interval = setInterval(() => {
-      console.log('Amar set Interval');
-    }, 1000);
+    // this.interval = setInterval(() => {
+    //   console.log('Amar set Interval');
+    // }, 1000);
   }
 
   componentWillUnmount() {
-    console.log('Unmounting');
-    clearInterval(this.interval);
+    //console.log('Unmounting');
+    //clearInterval(this.interval);
   }
   render() {
     console.log('parent - render');

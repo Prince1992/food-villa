@@ -4,6 +4,14 @@ export const Profile = ({ name }) => {
   const [count, setCount] = useState(10);
   useEffect(() => {
     console.log('use Effect');
+    const timer = setInterval(() => {
+      console.log('Amar set Interval>>>');
+    }, 1000);
+
+    return () => {
+      console.log('Use Effect Return');
+      clearInterval(timer);
+    };
   });
   console.log('render funntion');
 
