@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -12,6 +12,9 @@ import RestrauntMenu from './components/RestrauntMenu';
 import Profile from './components/ProfileClass';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const Instamart = lazy(() => import('./components/Instamart'));
+//upon on demand loading -> upon render -> react suspend loading
 
 const appRouter = createBrowserRouter([
   {
@@ -40,6 +43,14 @@ const appRouter = createBrowserRouter([
       {
         path: '/restaurant/:id',
         element: <RestrauntMenu />,
+      },
+      {
+        path: '/instamart',
+        element: (
+          <Suspense>
+            <Instamart />
+          </Suspense>
+        ),
       },
     ],
   },

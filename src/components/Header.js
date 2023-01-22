@@ -31,11 +31,14 @@ const Header = () => {
             <Link to="/contact">Contact</Link>
           </li>
           <li>
+            <Link to="/instamart">Instamart</Link>
+          </li>
+          <li>
             <Link>Cart</Link>
           </li>
         </ul>
       </div>
-      {isOnline ? '✅' : '🔴'}
+      {isOnline ? '✅ Online' : '🔴 Offline'}
       {isLoggedIn ? (
         <button onClick={() => setIsLoggedIn(false)}>Logout</button>
       ) : (
