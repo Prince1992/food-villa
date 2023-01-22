@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import About from './components/About';
 import AppLayout from './App';
 import Error from './components/Error';
 import Contact from './components/Contact';
@@ -15,6 +14,7 @@ import Shimmer from './components/Shimmer';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const Instamart = lazy(() => import('./components/Instamart'));
+const About = lazy(() => import('./components/About'));
 //upon on demand loading -> upon render -> react suspend loading
 
 const appRouter = createBrowserRouter([
@@ -29,7 +29,11 @@ const appRouter = createBrowserRouter([
       },
       {
         path: '/about',
-        element: <About />,
+        element: (
+          <Suspense fallback={<h1>Loading......</h1>}>
+            <About />
+          </Suspense>
+        ),
         children: [
           {
             path: 'profile',
