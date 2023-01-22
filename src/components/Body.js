@@ -3,6 +3,7 @@ import Card from './Card';
 import Shimmer from './Shimmer';
 import { Link } from 'react-router-dom';
 import { filterData } from '../utils/helper';
+import useOnline from '../utils/useOnline';
 
 const Body = () => {
   //searchTxt  is local variable
@@ -31,6 +32,10 @@ const Body = () => {
 
   //if restaurant is empty => load shimmer UI
   // if restaurant has data => actual data
+  const isOnline = useOnline();
+  if (!isOnline) {
+    return <h1>Offline - Check your Internet Connection</h1>;
+  }
 
   if (!allRestaurant) return null;
 
