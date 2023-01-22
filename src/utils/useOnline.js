@@ -3,12 +3,19 @@ const useOnline = () => {
   const [isOnline, setIsonline] = useState(true);
 
   useEffect(() => {
-    window.addEventListener('online', () => {
+    const handleOnline = () => {
       setIsonline(true);
-    });
-    window.addEventListener('offline', () => {
+    };
+    const handleOffline = () => {
       setIsonline(false);
-    });
+    };
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
+
+    return () => {
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
+    };
   }, []);
 
   return isOnline; //Returns true and false
