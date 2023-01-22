@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import Body from './components/Body';
 import RestrauntMenu from './components/RestrauntMenu';
 import Profile from './components/ProfileClass';
+import Shimmer from './components/Shimmer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -47,7 +48,7 @@ const appRouter = createBrowserRouter([
       {
         path: '/instamart',
         element: (
-          <Suspense>
+          <Suspense fallback={<Shimmer />}>
             <Instamart />
           </Suspense>
         ),
