@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Card from './Card';
 import Shimmer from './Shimmer';
 import { Link } from 'react-router-dom';
+import { filterData } from '../utils/helper';
 
 const Body = () => {
   //searchTxt  is local variable
@@ -28,13 +29,6 @@ const Body = () => {
     setSearchText(e.target.value);
   };
 
-  const filterData = () => {
-    const filterData = allRestaurant.filter((res) =>
-      res?.data?.name?.toLowerCase().includes(searchText.toLowerCase())
-    );
-    return filterData;
-  };
-
   //if restaurant is empty => load shimmer UI
   // if restaurant has data => actual data
 
@@ -56,7 +50,7 @@ const Body = () => {
         <button
           className="search-btn"
           onClick={() => {
-            const data = filterData(allRestaurant);
+            const data = filterData(searchText, allRestaurant);
             setFilteredRestaurant(data);
           }}
         >
