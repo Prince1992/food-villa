@@ -43,9 +43,7 @@ const Body = () => {
     <Shimmer />
   ) : (
     <>
-      <h1 class="font-bold text-xl text-green-600">Hello Word</h1>
-      <h1 class="font-bold text-2xl">Hello Word 2</h1>
-      <div className="searchContainer">
+      <div className="p-5 bg-pink-100 my-2">
         <input
           type="text"
           className="search-input"
@@ -55,8 +53,7 @@ const Body = () => {
         />
 
         <button
-          className="search-btn"
-          style={{ backgroundColor: 'lightgrey' }}
+          className="bg-purple-700 text-white p-2 m-2 rounded-md"
           onClick={() => {
             const data = filterData(searchText, allRestaurant);
             setFilteredRestaurant(data);
@@ -65,7 +62,7 @@ const Body = () => {
           Search
         </button>
       </div>
-      <div className="cardList">
+      <div className="flex flex-wrap">
         {filteredRestaurant.length === 0 ? (
           <h1>No Restaurant Found....</h1>
         ) : (

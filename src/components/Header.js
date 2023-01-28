@@ -4,36 +4,32 @@ import Logo from '../assets/img/logo.jpeg';
 import { Link } from 'react-router-dom';
 import useOnline from '../utils/useOnline';
 
-const loggedInUser = () => {
-  // API call to check
-  return true;
-};
 const Title = () => {
-  return <img className="logo" alt="test" src={Logo} />;
+  return <img className="h-28 p-2" alt="test" src={Logo} />;
 };
 
 const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const isOnline = useOnline();
   return (
-    <div className="header">
+    <div className="flex justify-between bg-pink-50 shadow-lg">
       <Title />
       <div className="nav-bar">
-        <ul>
-          <li>
+        <ul className="flex py-10">
+          <li className="px-2">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="px-2">
             <Link to="/about">About</Link>
           </li>
 
-          <li>
+          <li className="px-2">
             <Link to="/contact">Contact</Link>
           </li>
-          <li>
+          <li className="px-2">
             <Link to="/instamart">Instamart</Link>
           </li>
-          <li>
+          <li className="px-2">
             <Link>Cart</Link>
           </li>
         </ul>
