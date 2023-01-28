@@ -46,7 +46,7 @@ const Body = () => {
       <div className="p-5 bg-pink-100 my-2">
         <input
           type="text"
-          className="search-input"
+          className="border-2 border-purple-900 focus:bg-green-400 p-2 m-2 rounded"
           placeholder="Search"
           value={searchText}
           onChange={onChangeValue}
