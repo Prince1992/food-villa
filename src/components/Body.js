@@ -53,7 +53,7 @@ const Body = () => {
         />
 
         <button
-          className="bg-purple-700 text-white p-2 m-2 rounded-md"
+          className="bg-green-700 hover:bg-violet-600 text-white p-2 m-2 rounded-md"
           onClick={() => {
             const data = filterData(searchText, allRestaurant);
             setFilteredRestaurant(data);
