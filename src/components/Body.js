@@ -43,6 +43,8 @@ const Body = () => {
     <Shimmer />
   ) : (
     <>
+      <h1 class="font-bold text-xl text-green-600">Hello Word</h1>
+      <h1 class="font-bold text-2xl">Hello Word 2</h1>
       <div className="searchContainer">
         <input
           type="text"
@@ -54,6 +56,7 @@ const Body = () => {
 
         <button
           className="search-btn"
+          style={{ backgroundColor: 'lightgrey' }}
           onClick={() => {
             const data = filterData(searchText, allRestaurant);
             setFilteredRestaurant(data);
