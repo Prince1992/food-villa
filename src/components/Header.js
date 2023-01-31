@@ -1,18 +1,17 @@
 import { useState } from 'react';
-import { IMG_URL } from '../config';
 import Logo from '../assets/img/logo.jpeg';
 import { Link } from 'react-router-dom';
 import useOnline from '../utils/useOnline';
 
 const Title = () => {
-  return <img className="h-28 p-2" alt="test" src={Logo} />;
+  return <img className="sm:h-28 p-2" alt="test" src={Logo} />;
 };
 
 const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const isOnline = useOnline();
   return (
-    <div className="flex justify-between bg-pink-50 shadow-lg">
+    <div className="shadow-lg sm:flex justify-between sm:bg-amber-200">
       <Title />
       <div className="nav-bar">
         <ul className="flex py-10">
