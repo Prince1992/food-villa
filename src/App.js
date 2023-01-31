@@ -5,12 +5,12 @@ import { Outlet } from 'react-router-dom';
 
 function AppLayout() {
   return (
-    <>
+    <div className="p-2">
       <Header />
       {/*Outlet for different layouts*/}
       <Outlet />
       <Footer />
-    </>
+    </div>
   );
 }
 

@@ -35,7 +35,9 @@ const Header = () => {
       </div>
       {isOnline ? '✅ Online' : '🔴 Offline'}
       {isLoggedIn ? (
-        <button onClick={() => setIsLoggedIn(false)}>Logout</button>
+        <button className="pr-4" onClick={() => setIsLoggedIn(false)}>
+          Logout
+        </button>
       ) : (
         <button onClick={() => setIsLoggedIn(true)}>Login</button>
       )}
