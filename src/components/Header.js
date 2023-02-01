@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import Logo from '../assets/img/logo.jpeg';
 import { Link } from 'react-router-dom';
 import useOnline from '../utils/useOnline';
+import UserContext from '../utils/UserContext';
 
 const Title = () => {
   return <img className="sm:h-28 p-2" alt="test" src={Logo} />;
@@ -10,6 +11,7 @@ const Title = () => {
 const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const isOnline = useOnline();
+  const { user } = useContext(UserContext);
   return (
     <div className="shadow-lg sm:flex justify-between sm:bg-amber-200">
       <Title />
@@ -34,6 +36,7 @@ const Header = () => {
         </ul>
       </div>
       {isOnline ? '✅ Online' : '🔴 Offline'}
+      <span className="font-bold text-red-500 m-1 p-1">{user.name}</span>
       {isLoggedIn ? (
         <button className="pr-4" onClick={() => setIsLoggedIn(false)}>
           Logout
