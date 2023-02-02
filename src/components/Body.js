@@ -45,25 +45,28 @@ const Body = () => {
     <Shimmer />
   ) : (
     <>
-      <div className="p-5 bg-pink-100 my-2">
-        <input
-          type="text"
-          className="border-2 border-purple-900 focus:bg-green-400 p-2 m-2 rounded"
-          placeholder="Search"
-          value={searchText}
-          onChange={onChangeValue}
-        />
+      <div className="flex justify-center space-x-4">
+        <div className="flex justify-center rounded-md w-full overflow-hidden">
+          <input
+            type="text"
+            className="border-2 border-purple-900 focus:bg-lime-100 rounded-l-md w-1/2 py-2 px-4 mt-4 mb-4"
+            placeholder="Search"
+            value={searchText}
+            onChange={onChangeValue}
+          />
 
-        <button
-          className="bg-green-700 hover:bg-violet-600 text-white p-2 m-2 rounded-md"
-          onClick={() => {
-            const data = filterData(searchText, allRestaurant);
-            setFilteredRestaurant(data);
-          }}
-        >
-          Search
-        </button>
-        <input
+          <button
+            className="bg-violet-500 hover:bg-purple-900 text-white rounded-r-md py-2 px-4 mt-4 mb-4"
+            onClick={() => {
+              const data = filterData(searchText, allRestaurant);
+              setFilteredRestaurant(data);
+            }}
+          >
+            Search
+          </button>
+        </div>
+
+        {/* <input
           value={user.name}
           onChange={(e) => {
             setUser({
@@ -80,7 +83,7 @@ const Body = () => {
               email: e.target.value,
             });
           }}
-        />
+        /> */}
       </div>
       <div className="flex flex-wrap justify-between bg-purple-600 ">
         {filteredRestaurant.length === 0 ? (
