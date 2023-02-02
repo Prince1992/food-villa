@@ -85,7 +85,7 @@ const Body = () => {
           }}
         /> */}
       </div>
-      <div className="flex flex-wrap justify-between bg-purple-600 ">
+      <div className="flex flex-wrap justify-between mt-8 ">
         {filteredRestaurant.length === 0 ? (
           <h1>No Restaurant Found....</h1>
         ) : (
