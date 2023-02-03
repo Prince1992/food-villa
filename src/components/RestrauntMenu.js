@@ -14,25 +14,47 @@ const RestrauntMenu = () => {
   return !restaurant ? (
     <Shimmer />
   ) : (
-    <div className="menu">
-      <div>
-        <h1>Restrauent id: {restaurant.id}</h1>
-        <h2>{restaurant.name}</h2>
-        <h2>{restaurant.area}</h2>
-        <h2>{restaurant.city}</h2>
-        <h2>{restaurant.costForTwoMsg}</h2>
-        <h2>{restaurant.avgRating}</h2>
-        <img src={IMG_CDN_URL + restaurant.cloudinaryImageId} alt="Test" />
+    <>
+      <div className="flex justify-evenly bg-black w-full h-52 p-5">
+        <div className="justify-center">
+          <img
+            className="h-40"
+            src={IMG_CDN_URL + restaurant.cloudinaryImageId}
+            alt="Test"
+          />
+        </div>
+
+        <div className="w-60">
+          <div className="m-1 p-1">
+            <p className="font-bold text-2xl text-white">{restaurant.name}</p>
+            <p className="font-bold text-md text-white">{restaurant.city}</p>
+            <p className="font-bold text-md text-white">{restaurant.area}</p>
+          </div>
+          <div className="flex justify-between divide-x">
+            <p className="font-bold text-2xl text-white">
+              ☆ {restaurant.avgRating}
+            </p>
+
+            <p className="font-bold text-2xl text-white ml-5">
+              {restaurant.costForTwoMsg}
+            </p>
+          </div>
+        </div>
+        <div className=" w-60"></div>
       </div>
-      <div>
-        <h2>Menu</h2>
+
+      <div className="flex justify-center">
         <ul>
+          <p className="font-bold border-b-2  m-2 text-2xl">Menu</p>
           {Object.values(restaurant?.menu?.items).map((item) => (
-            <li key={item?.id}>{item?.name}</li>
+            <li className="m-2 text-lg font-thin" key={item?.id}>
+              {item?.name}
+            </li>
           ))}
+          <p className="border-b-2 m-2"></p>
         </ul>
       </div>
-    </div>
+    </>
   );
 };
 export default RestrauntMenu;
