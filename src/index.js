@@ -10,6 +10,7 @@ import Body from './components/Body';
 import RestrauntMenu from './components/RestrauntMenu';
 import Profile from './components/ProfileClass';
 import Shimmer from './components/Shimmer';
+import Cart from './components/Cart';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -56,6 +57,10 @@ const appRouter = createBrowserRouter([
             <Instamart />
           </Suspense>
         ),
+      },
+      {
+        path: '/cart',
+        element: <Cart />,
       },
     ],
   },

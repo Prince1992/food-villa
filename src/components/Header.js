@@ -3,6 +3,7 @@ import Logo from '../assets/img/logo-no-background.png';
 import { Link } from 'react-router-dom';
 import useOnline from '../utils/useOnline';
 import UserContext from '../utils/UserContext';
+import { useSelector } from 'react-redux';
 
 const Title = () => {
   return <img className="sm:h-28 p-2" alt="test" src={Logo} />;
@@ -12,6 +13,7 @@ const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const isOnline = useOnline();
   const { user } = useContext(UserContext);
+  const cartItems = useSelector((store) => store.cart.items);
   return (
     <div className="shadow-lg sm:flex justify-between sm:bg-yellow-400">
       <Title />
@@ -31,7 +33,7 @@ const Header = () => {
             <Link to="/instamart">Instamart</Link>
           </li>
           <li className="px-2 font-bold">
-            <Link>Cart</Link>
+            <Link to="/cart">Cart - {cartItems.length}</Link>
           </li>
         </ul>
       </div>
